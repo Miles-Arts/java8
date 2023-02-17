@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Clase2 {
+public class Clase4 {
 
     public static void main(String[] args) {
 
@@ -17,28 +17,24 @@ public class Clase2 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        //Collections.sort(cursos, new CompararClase2());
-        cursos.sort(new CompararClase4());
-        //cursos.forEach(new ConsumidorClase4());
+        cursos.sort((o1, o2) ->
+           // Integer.compare(o1.length(), o2.length())
+            Integer.compare(o2.length(), o1.length())
+        );
+        /*cursos.sort((o1, o2) -> {
+                if(o1.length() > o2.length()) {
+                    return 1;
+                } else if (o1.length() < o2.length()) {
+                    return -1;
+                }
+                return  0;
+        });*/
 
-
-       /* for (String curso : cursos) {
-
-            System.out.println(curso);
-
-        }*/
+        cursos.forEach( s -> System.out.println(s));
     }
 }
 
-class ConsumidorClase2 implements Consumer<String> {
-
-    @Override
-    public void accept(String s) {
-        System.out.println(s.length());
-    }
-}
-
-class CompararClase2 implements Comparator<String> {
+class CompararClase4 implements Comparator<String> {
 
     @Override
     public int compare(String o1, String o2) {
@@ -48,10 +44,10 @@ class CompararClase2 implements Comparator<String> {
         } else if (o1.length() < o2.length()) {
             return -1;
         }
-          return  0;
+        return  0;
     }
-
-    public static class Clase2 {
+}
+    /*public static class Clase3 {
 
         public static void main(String[] args) {
 
@@ -71,4 +67,4 @@ class CompararClase2 implements Comparator<String> {
             }
         }
     }
-}
+}*/

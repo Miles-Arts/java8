@@ -17,7 +17,7 @@ public class Clase3 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        cursos.sort(new CompararClase3());
+        cursos.sort(new CompararClase4());
 
         /*if (true) {
             System.out.println("1");
@@ -46,7 +46,7 @@ class CompararClase3 implements Comparator<String> {
         } else if (o1.length() < o2.length()) {
             return -1;
         }
-          return  0;
+        return  0;
     }
 
     public static class Clase3 {
@@ -60,7 +60,7 @@ class CompararClase3 implements Comparator<String> {
             cursos.add("Curso de Geometría del espacio");
             cursos.add("Curso de Historia Universal");
 
-            Collections.sort(cursos, new CompararClase3());
+            Collections.sort(cursos, new CompararClase4());
 
             for (String curso : cursos) {
 
