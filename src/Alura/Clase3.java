@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Clase2 {
+public class Clase3 {
 
     public static void main(String[] args) {
 
@@ -17,20 +17,18 @@ public class Clase2 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        //Collections.sort(cursos, new CompararClase2());
         cursos.sort(new CompararClase3());
-        cursos.forEach(new ConsumidorClase3());
 
-
-       /* for (String curso : cursos) {
-
-            System.out.println(curso);
-
+        /*if (true) {
+            System.out.println("1");
+            System.out.println("2");
         }*/
+
+        cursos.forEach( texto -> System.out.println(texto));
     }
 }
 
-class ConsumidorClase2 implements Consumer<String> {
+class ConsumidorClase3 implements Consumer<String> {
 
     @Override
     public void accept(String s) {
@@ -38,7 +36,7 @@ class ConsumidorClase2 implements Consumer<String> {
     }
 }
 
-class CompararClase2 implements Comparator<String> {
+class CompararClase3 implements Comparator<String> {
 
     @Override
     public int compare(String o1, String o2) {
@@ -51,7 +49,7 @@ class CompararClase2 implements Comparator<String> {
           return  0;
     }
 
-    public static class Clase2 {
+    public static class Clase3 {
 
         public static void main(String[] args) {
 
