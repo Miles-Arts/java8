@@ -17,12 +17,19 @@ public class Clase3 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        cursos.sort(new CompararClase4());
+        cursos.sort(new CompararClase3());
 
         /*if (true) {
             System.out.println("1");
             System.out.println("2");
         }*/
+
+        cursos.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+            System.out.println(s);
+            }
+        });
 
         cursos.forEach( texto -> System.out.println(texto));
     }

@@ -3,6 +3,7 @@ package Alura;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 public class Clase5 {
 
@@ -15,11 +16,11 @@ public class Clase5 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        cursos.sort((o1, o2) ->
-            Integer.compare(o2.length(), o1.length())
-        );
+        Function<String, Integer> funcion = x -> x.length();
 
-        cursos.forEach( s -> System.out.println(s));
+        cursos.sort(Comparator.comparing(funcion));
+
+        cursos.forEach(x -> System.out.println(x));
     }
 }
 
