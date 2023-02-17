@@ -21,6 +21,7 @@ public class Clase2 {
         cursos.sort(new CompararClase2());
         cursos.forEach(new ConsumidorClase2());
 
+
        /* for (String curso : cursos) {
 
             System.out.println(curso);
