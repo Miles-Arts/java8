@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Clase1 {
+public class Clase2 {
 
     public static void main(String[] args) {
 
@@ -26,7 +26,7 @@ public class Clase1 {
     }
 }
 
-class Comparar implements Comparator<String> {
+class CompararClase2 implements Comparator<String> {
 
     @Override
     public int compare(String o1, String o2) {
