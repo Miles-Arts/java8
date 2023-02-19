@@ -1,5 +1,7 @@
 package Alura;
 
+import model.Curso;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -36,25 +38,6 @@ public class Clase7 {
     }
         //cursos.stream().filter(x -> x.getHoras() >= 300);
         //cursos.forEach(x -> System.out.println(x.getNombre()));
-}
-
-
-class Curso {
-    private String nombre;
-    private int horas;
-
-    public Curso(String nombre, int horas) {
-        this.nombre = nombre;
-        this.horas = horas;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getHoras() {
-        return horas;
-    }
 }
 
 
