@@ -16,6 +16,11 @@ public class Curso {
     public int getHoras() {
         return horas;
     }
+
+    @Override
+    public String toString() {
+        return this.nombre.concat(" - ").concat(String.valueOf(this.getHoras()));
+    }
 }
 
 
