@@ -1,7 +1,5 @@
 package model;
 
-
-
 public class Curso {
     private String nombre;
     private int horas;
