@@ -16,9 +16,11 @@ public class Clase5 {
         cursos.add("Curso de Geometría del espacio");
         cursos.add("Curso de Historia Universal");
 
-        Function<String, Integer> funcion = x -> x.length();
+        //Function<String, Integer> funcion = x -> x.length();
 
-        cursos.sort(Comparator.comparing(funcion));
+        //cursos.sort(Comparator.comparing(funcion));
+        cursos.sort(Comparator.comparing(String::length));
+
 
         cursos.forEach(x -> System.out.println(x));
     }
