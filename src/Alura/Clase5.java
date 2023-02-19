@@ -22,7 +22,7 @@ public class Clase5 {
         cursos.sort(Comparator.comparing(String::length));
 
 
-        cursos.forEach(x -> System.out.println(x));
+        cursos.forEach(s -> System.out.println(s));
     }
 }
 
