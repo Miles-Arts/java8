@@ -1,5 +1,6 @@
 package Alura;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -19,9 +20,17 @@ public class Clase6 {
 
         //cursos.sort(Comparator.comparing(funcion));
         cursos.sort(Comparator.comparing(String::length));
+        //cursos.forEach(System.out::println);
+
+        //reverso
+        cursos.sort(Comparator.comparing(String::length).reversed());
 
 
         cursos.forEach(System.out::println);
+        /*cursos.forEach(x -> {
+            System.out.println(x);
+            System.out.println(x.length());
+        });*/
     }
 }
 
