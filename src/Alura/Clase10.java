@@ -5,7 +5,7 @@ import model.Curso;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Clase9 {
+public class Clase10 {
 
     public static void main(String[] args) {
 
@@ -39,8 +39,14 @@ public class Clase9 {
 
         //System.out.println(curso);
 
-        List<Curso> cursoList = cursos.stream().filter(x -> x.getHoras() > 300).collect(Collectors.toList());
-        cursoList.forEach(System.out::println);
+        //cursos.stream().filter(x -> x.getHoras() > 300).collect(Collectors.toList()).forEach(System.out::println);
+
+
+        Map<Integer, String> mapaCursos =  cursos.stream().filter(x -> x.getHoras() > 300).collect(Collectors.toMap(Curso::getHoras,Curso::getNombre));
+
+        //cursos.stream().filter(x -> x.getHoras() > 300).collect(Collectors.toMap(Curso::getHoras,Curso::getNombre)).forEach((llave, valor) -> System.out.println(valor));
+
+        mapaCursos.forEach((llave, valor) -> System.out.println(valor));
     }
 }
 
