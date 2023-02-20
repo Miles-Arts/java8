@@ -1,6 +1,7 @@
 package Alura;
 
 import model.Curso;
+import model.CursoTipo;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,6 +16,13 @@ public class Clase10 {
         cursos.add(new Curso("Curso de Java 8", 500));
         cursos.add(new Curso("Curso de Geometría del espacio", 400));
         cursos.add(new Curso("Curso de Historia Universal", 300));
+
+        List<CursoTipo> cursosTipos = new ArrayList<>();
+
+        cursosTipos.add(new CursoTipo("Curso de Física", 200, 1));
+        cursosTipos.add(new CursoTipo("Curso de Java 8", 500, 1));
+        cursosTipos.add(new CursoTipo("Curso de Geometría del espacio", 400, 2));
+        cursosTipos.add(new CursoTipo("Curso de Historia Universal", 300, 2));
 
         cursos.sort(Comparator.comparing(Curso::getHoras));
 
@@ -47,6 +55,11 @@ public class Clase10 {
         //cursos.stream().filter(x -> x.getHoras() > 300).collect(Collectors.toMap(Curso::getHoras,Curso::getNombre)).forEach((llave, valor) -> System.out.println(valor));
 
         mapaCursos.forEach((llave, valor) -> System.out.println(valor));
+
+        Map<Integer, List<CursoTipo>> mapaCursosTipos =  cursosTipos.stream().filter(x -> x.getHoras() > 100).collect(Collectors.groupingBy(CursoTipo::getTipo));
+
+        mapaCursosTipos.get(1).forEach(System.out::println);
+        mapaCursosTipos.get(2).forEach(System.out::println);
     }
 }
 
